@@ -1,0 +1,4 @@
+C:\Users\kevin\source\repos\CPEN 333 Shelf and Racks\obj\Debug\netcoreapp3.1\CPEN 333 Shelf and Racks.csprojAssemblyReference.cache
+C:\Users\kevin\source\repos\CPEN 333 Shelf and Racks\obj\Debug\netcoreapp3.1\CPEN 333 Shelf and Racks.AssemblyInfoInputs.cache
+C:\Users\kevin\source\repos\CPEN 333 Shelf and Racks\obj\Debug\netcoreapp3.1\CPEN 333 Shelf and Racks.AssemblyInfo.cs
+C:\Users\kevin\source\repos\CPEN 333 Shelf and Racks\obj\Debug\netcoreapp3.1\CPEN 333 Shelf and Racks.csproj.CoreCompileInputs.cache
