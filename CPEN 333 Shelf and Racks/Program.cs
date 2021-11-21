@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -8,7 +8,6 @@ namespace CPEN_333_Shelf_and_Racks
     {
         static void Main(string[] args)
         {
-            int racksPerColumn = 3;
             int numCols = 8;
             int numRows = 5;
             int numShelves = 5;
@@ -17,7 +16,7 @@ namespace CPEN_333_Shelf_and_Racks
             // checking occupancy attribute in Rack class
             Rack[,] grid = new Rack[numRows, numCols];
 
-            // Generate racks for outer columns
+            // Generate racks for outer columns (columns of A and H)
             for (int i = 2; i < numRows; i++)
             {
                 grid[i, 1] = new Rack(1, 1, numShelves);
@@ -34,7 +33,7 @@ namespace CPEN_333_Shelf_and_Racks
                 }
             }
   
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Warehouse grid has been compiled!");
         }
     }
 
