@@ -15,7 +15,6 @@ namespace CPEN_333_Shelf_and_Racks
 
             int totalGrids = 0; // Indicator for how many grids were generated (to help error checking)
 
-
             // Generate 2D warehouse grid of racks; can keep track of whether a rack is there by 
             // checking occupancy attribute in Rack class
             Rack[,] grid = new Rack[numRows, numCols];
@@ -65,8 +64,8 @@ namespace CPEN_333_Shelf_and_Racks
         {
             this.occupancy = 0;
             this.side = 0; // 0 = left, 1 = right
-            this.shelf_levels = 5;
-            this.shelves = new Shelf[5];
+            this.shelf_levels = 0;
+            this.shelves = Array.Empty<Shelf>();
         }
     }
 
@@ -74,18 +73,29 @@ namespace CPEN_333_Shelf_and_Racks
     {
         public int level;
         public double weight_capacity;
+        public double volume_capacity;
 
         // Shelf constructors
-        public Shelf(int level, double weight_capacity)
+        public Shelf(int level, double weight_capacity, double volume_capacity)
         {
             this.level = level;
             this.weight_capacity = weight_capacity;
+            this.volume_capacity = volume_capacity;
         }
 
         public Shelf()
         {
             this.level = 1;
             this.weight_capacity = 5000;
+            this.volume_capacity = 10000;
         }
+
+    }
+
+    public class Tile
+    {
+        public int rack_occupancy;
+        public int robot_occupancy;
+        // Nested classes
     }
 }
