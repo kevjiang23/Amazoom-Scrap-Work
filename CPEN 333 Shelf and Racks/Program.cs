@@ -52,7 +52,7 @@ namespace CPEN_333_Shelf_and_Racks
         }
     }
 
-    public class Rack
+    public class Rack // Each rack will contain shelves; a rack can be on the left side, right side or both sides of a grid
     {
         public int shelf_levels;
         public Shelf[] shelves;
@@ -70,7 +70,7 @@ namespace CPEN_333_Shelf_and_Racks
         }
     }
 
-    public class Shelf
+    public class Shelf // Constructing the rack class will generate a series of shelves; helps contain items and keep track of storage space
     {
         public int level;
         public double weight_capacity;
@@ -91,7 +91,7 @@ namespace CPEN_333_Shelf_and_Racks
         }
     }
 
-    public class Tile
+    public class Tile // Each tile will be the building block of the warehouse grid; will keep track of rack and robot locations
     {
         public int rack_occupancy; // 1) Check rack_occupancy, 2) check side to identify where the racks are located
         public int robot_occupancy;
@@ -100,7 +100,7 @@ namespace CPEN_333_Shelf_and_Racks
         public Rack rightRack;
         public int shelvesNumber;
 
-    // Tile constructors
+    // Tile constructors 
     public Tile(int rack_occupancy, int robot_occupancy, int side, int shelvesNumber)
         {
             this.rack_occupancy = rack_occupancy;
@@ -110,7 +110,7 @@ namespace CPEN_333_Shelf_and_Racks
                 this.leftRack = new Rack(shelvesNumber);
             else if (side == 1) // side = 1 means only a right rack
                 this.rightRack = new Rack(shelvesNumber);
-            else // side = 2 means both shelves
+            else // side = 2 means shelves on both sides
             {
                 this.leftRack = new Rack(shelvesNumber);
                 this.rightRack = new Rack(shelvesNumber);
